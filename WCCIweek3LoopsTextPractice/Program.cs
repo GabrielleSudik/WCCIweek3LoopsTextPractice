@@ -100,6 +100,50 @@ namespace WCCIweek3LoopsTextPractice
 
             Console.WriteLine($"\n{r} to the power of {s} is {result}.");
 
+            Console.ReadLine();
+
+            //for loop with several variables
+
+            for (int small = 1, large = 10; small < large; small++, large--)
+            {
+                Console.WriteLine($"{small} and {large} are converging...");
+            }
+
+            //using "continue"
+            //example: sum odd numbers except those divisible by 7
+
+            Console.WriteLine("\nPlease enter a largish number.");
+            int largish = int.Parse(Console.ReadLine());
+            int sum2 = 0;
+
+            for (int i =0; i <= largish; i +=2)
+            {
+                if (i % 7 == 0)
+                {
+                    continue; //this word SKIPS the rest of the loop for that iteration, if condition met.
+                }
+
+                sum2 += i;
+            }
+
+            Console.WriteLine($"\nThe sum of all odd numbers, excluding \"7s\" is {sum2}.");
+
+            //nested loops -- a loop in a loop
+            //let's print a triangle
+
+            Console.WriteLine("\nEnter a number between 5 and 12.");
+            int num4 = int.Parse(Console.ReadLine());
+
+            for (int row = 1; row <+ num4; row++)
+            {
+                for (int col = 1; col <= row; col++)
+                {
+                    Console.Write(col + " ");
+                }
+
+                Console.WriteLine();
+            }
+            //well that didn't work lol. read the text some more.
 
             Console.ReadLine();
         }
