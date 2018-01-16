@@ -143,7 +143,36 @@ namespace WCCIweek3LoopsTextPractice
 
                 Console.WriteLine();
             }
-            //well that didn't work lol. read the text some more.
+
+            //prime numbers
+
+            Console.WriteLine("Enter a number for prime counting.");
+            int num5 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter another number for prime counting.");
+            int num6 = int.Parse(Console.ReadLine());
+
+            for (int eachcount = num5; eachcount <= num6; eachcount++)
+            {
+                bool prime = true;
+                int divider = 2;
+                int maxDivider = (int)Math.Sqrt(eachcount);
+                while (divider <= maxDivider)
+                {
+                    if (eachcount % divider == 0)
+                    {
+                        prime = false;
+                        break;
+                    }
+                    divider++;
+                }
+
+                if (prime)
+                {
+                    Console.Write(eachcount + " ");
+                }
+            }
+
 
             Console.ReadLine();
         }
